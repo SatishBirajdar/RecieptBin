@@ -240,12 +240,12 @@
 				TargetAttributes = {
 					E3F71AA21F3D305700BCC10C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3PSKWPY773;
+						DevelopmentTeam = U45NT6P2KF;
 						ProvisioningStyle = Automatic;
 					};
 					E3F71AB91F3D305700BCC10C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3PSKWPY773;
+						DevelopmentTeam = U45NT6P2KF;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E3F71AA21F3D305700BCC10C;
 					};
@@ -469,8 +469,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PSKWPY773;
+				DEVELOPMENT_TEAM = U45NT6P2KF;
 				INFOPLIST_FILE = RecieptBin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.SBSoftwares.RecieptBin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,8 +483,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PSKWPY773;
+				DEVELOPMENT_TEAM = U45NT6P2KF;
 				INFOPLIST_FILE = RecieptBin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.SBSoftwares.RecieptBin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,7 +498,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3PSKWPY773;
+				DEVELOPMENT_TEAM = U45NT6P2KF;
 				INFOPLIST_FILE = RecieptBinTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.SBSoftwares.RecieptBinTests;
@@ -511,7 +513,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3PSKWPY773;
+				DEVELOPMENT_TEAM = U45NT6P2KF;
 				INFOPLIST_FILE = RecieptBinTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.SBSoftwares.RecieptBinTests;
