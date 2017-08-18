@@ -8,13 +8,16 @@
 
 import Foundation
 
-struct CategoryViewModel{
+struct CategoryViewDataModel{
     let name: String
 }
 
 protocol CategoryPresenterView: AnyObject{
-    func displayCategories(categories: [CategoryViewModel])
+    
+    func displayCategories(categories: [CategoryViewDataModel])
+    
 }
+
 
 //protocol CategoryPresentor{
 //    func attachView(view: CategoryPresenterView)

@@ -24,36 +24,19 @@ class CategoryPresenter {
     
     func getCategories(){
 
-        if let categoriess: Array<Category> = categoryService.getCategories() {
-            if(categoriess.count == 0){
-//                self.categoryView?.setEmptyUsers()
-                print("Empty category list")
-            }else{
-                let mappedCategories = categoriess.map{_ in 
-                    return CategoryViewModel(name: "$0.name")
-                }
-                print("Not Empty category list")
-                self.categoryView?.displayCategories(categories: mappedCategories)
+    if let categoriess: Array<Category> = categoryService.getCategories() {
+        if(categoriess.count == 0){
+            print("Empty category list")
+        }else{
+            
+            let mappedCategories = categoriess.map{ item in
+                return CategoryViewDataModel(name: "\(item.firstName) \(item.lastName)")
             }
+            self.categoryView?.displayCategories(categories: mappedCategories)
+            print("Not Empty category list")
             
         }
         
-        
-        
-        
-//        categoryService.getCategories() { [weak self] users in
-//            self?.userView?.finishLoading()
-//            if(users.count == 0){
-//                self?.userView?.setEmptyUsers()
-//            }else{
-//                let mappedUsers = users.map{
-//                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age) years")
-//                }
-//                self?.userView?.setUsers(mappedUsers)
-//            }
-//            
-//        }
-        
-        
     }
+  }
 }

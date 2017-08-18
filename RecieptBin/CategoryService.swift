@@ -11,8 +11,8 @@ import Foundation
 class CategoryService{
     
     func getCategories() -> Array <Category>{
-        let categories = [Category(name:"Satish"),
-                          Category(name:"Nikhil")]
+        let categories = [Category(firstName:"Satish", lastName:"Birajdar"),
+                          Category(firstName:"Nikhil", lastName:"Dekosta")]
        
         return categories
     }    
