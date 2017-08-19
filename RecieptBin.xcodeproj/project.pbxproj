@@ -114,7 +114,6 @@
 		E32697F71F40C98000061ACD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				E3EFF0A81F411966001CCD54 /* CategoryListContract.swift */,
 				E3EFF0AA1F4124AD001CCD54 /* CategoryPresenter.swift */,
 			);
 			name = Presenter;
@@ -145,6 +144,7 @@
 			children = (
 				E3F71AA61F3D305700BCC10C /* AppDelegate.swift */,
 				E32697F01F40C91600061ACD /* Category List */,
+				E3EFF0A81F411966001CCD54 /* CategoryListContract.swift */,
 				E3F71AAA1F3D305700BCC10C /* Main.storyboard */,
 				E3F71AB01F3D305700BCC10C /* Assets.xcassets */,
 				E3F71AB21F3D305700BCC10C /* LaunchScreen.storyboard */,
