@@ -14,26 +14,13 @@ class CategoryViewController: UIViewController  {
     @IBOutlet var tableView: UITableView!
     
      var categories: Array<CategoryViewDataModel> = []
-    private var categoryListPresenter: CategoryPresentor
-    
-    
-//
-//    convenience init(categoryListPresenter: CategoryPresentor = CategoryPresenterImpl()) {
-//        self.init()
-//        self.categoryListPresenter = categoryListPresenter
-////       
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-    
-    
+    lazy var categoryListPresenter: CategoryPresentor = {
+        return CategoryPresenterImpl()
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryListPresenter = CategoryPresenterImpl()
         tableView?.dataSource = self
         
         categoryListPresenter.attachView(view: self as CategoryPresenterView)
@@ -46,7 +33,6 @@ extension CategoryViewController: CategoryPresenterView {
         self.categories = categories
         tableView?.reloadData()
     }
-    
 }
 
 
@@ -60,7 +46,6 @@ extension CategoryViewController: UITableViewDataSource {
         let categoryViewData = categories[indexPath.row]
         cell.textLabel?.text = categoryViewData.name
         
-//        cell.textLabel
         return cell
     }
 }

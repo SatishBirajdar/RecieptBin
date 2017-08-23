@@ -18,6 +18,9 @@ class CategoryPresenterImpl: CategoryPresentor {
         categoryView = view
     }
     
+    
+    
+    
     func detachView() {
         categoryView = nil
     }
