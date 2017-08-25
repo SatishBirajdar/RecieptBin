@@ -6,6 +6,8 @@
 //  Copyright © 2017 SBSoftwares. All rights reserved.
 //
 
+import PromiseKit
+
 class CategoryPresenterImpl: CategoryPresentor {
     private let categoryService:CategoryService
     weak private var categoryView : CategoryPresenterView?
@@ -16,30 +18,37 @@ class CategoryPresenterImpl: CategoryPresentor {
     
     func attachView(view:CategoryPresenterView){
         categoryView = view
+        
+        
+        
+        let categories = categoryService.getCategories()
+            
+            .then { categories -> Array<Category> in
+                
+                let categoryArray: Array<Category> = categories.map { cat -> Category in
+                    return Category(
+                        firstName: cat.firstName,
+                        lastName: cat.lastName
+                    )
+                }
+                return categoryArray
+        }
+
+        
+        
+        
+        
+           // categoryView?.displayCategories(categories: (categories as? [CategoryViewDataModel])!)
+        
     }
-    
-    
-    
-    
+
     func detachView() {
         categoryView = nil
     }
-    
-//    func loadCategories(){
-//
-//    if let categories: Array<Category> = categoryService.getCategories() {
-//        if(categories.count == 0){
-//            print("Empty category list")
-//        }else{
-//            
-//            let mappedCategories = categories.map{ item in
-//                return CategoryViewDataModel(name: "\(item.firstName) \(item.lastName)")
-//            }
-//            self.categoryView?.displayCategories(categories: mappedCategories)
-//            print("Not Empty category list")
-//            
-//        }
-//        
-//    }
-//  }
+}
+
+extension Category: CategoryViewDataModel {
+    var name: String {
+        return firstName + " " + lastName
+    }
 }

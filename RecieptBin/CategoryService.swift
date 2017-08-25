@@ -7,17 +7,22 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol CategoryService{
-    func getCategories() -> Array <Category>
+    func getCategories() -> Promise<Array <Category>>
 }
 
 class CategoryServiceImpl: CategoryService {
     
-    func getCategories() -> Array <Category>{
+    func getCategories() -> Promise<Array <Category>>{
+        
+        
         let categories = [Category(firstName:"Satish", lastName:"Birajdar"),
                           Category(firstName:"Nikhil", lastName:"Dekosta")]
        
-        return categories
+        return Promise(value: categories)
+        
+        
     }    
 }

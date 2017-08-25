@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol CategoryViewDataModel{
     var name: String { get }
 }
 
 protocol CategoryPresenterView: AnyObject{
-    func displayCategories(categories: [CategoryViewDataModel])
+    func displayCategories(categories: Promise<Array<CategoryViewDataModel>>)
 }
 
 protocol CategoryPresentor{
