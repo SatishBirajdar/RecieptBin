@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CategoryListCell: UITableViewCell {
+class RecieptListCell: UITableViewCell {
     @IBOutlet weak var categoryNameLabel: UILabel!    
 }
