@@ -9,5 +9,8 @@
 import UIKit
 
 class RecieptListCell: UITableViewCell {
-    @IBOutlet weak var categoryNameLabel: UILabel!    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
 }

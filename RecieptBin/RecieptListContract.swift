@@ -10,7 +10,9 @@ import Foundation
 import PromiseKit
 
 protocol RecieptViewDataModel{
-    var name: String { get }
+    var modelTitle: String { get }
+    var modelDate: String { get }
+    var modelCost: String { get }
 }
 
 protocol RecieptPresenterView: AnyObject{

@@ -28,7 +28,13 @@ class RecieptPresenterImpl: RecieptPresenter {
 }
 
 extension Reciept: RecieptViewDataModel {
-    var name: String {
-        return firstName + " " + lastName
+    var modelTitle: String {
+        return title
+    }
+    var modelDate: String {
+        return date
+    }
+    var modelCost: String {
+        return currency + " " + String(amount)
     }
 }
