@@ -58,9 +58,8 @@ extension RecieptViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let recieptViewData = reciepts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RecieptListCell
-        cell.titleLabel?.text = recieptViewData.modelTitle
-        cell.dateLabel?.text = recieptViewData.modelDate
-        cell.amountLabel?.text = recieptViewData.modelCost
+        cell.categoryNameLabel?.text = recieptViewData.name
+
         return cell
     }
 }

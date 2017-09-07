@@ -26,7 +26,7 @@ class RecieptPresenterTest: XCTestCase {
     }
     
     
-    func testDisplayReciepts() {
+    func testDisplayCategories() {
        XCTAssertEqual(view.recieptsCount, 1)
     }
     
