@@ -1,5 +1,5 @@
 //
-//  CategoryPresenterTest.swift
+//  RecieptPresenterTest.swift
 //  RecieptBin
 //
 //  Created by Satish Birajdar on 2017-08-26.
