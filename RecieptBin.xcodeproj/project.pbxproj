@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30429BE1F70D216001B7F56 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = E30429BD1F70D216001B7F56 /* Jenkinsfile */; };
 		E32697F21F40C94500061ACD /* RecieptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32697F11F40C94500061ACD /* RecieptViewController.swift */; };
 		E32697F41F40C95300061ACD /* Reciept.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32697F31F40C95300061ACD /* Reciept.swift */; };
 		E32697F91F40CEF500061ACD /* RecieptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32697F81F40CEF500061ACD /* RecieptService.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E30429BD1F70D216001B7F56 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
 		E32697F11F40C94500061ACD /* RecieptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieptViewController.swift; sourceTree = "<group>"; };
 		E32697F31F40C95300061ACD /* Reciept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reciept.swift; sourceTree = "<group>"; };
 		E32697F81F40CEF500061ACD /* RecieptService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecieptService.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				E3F71AB21F3D305700BCC10C /* LaunchScreen.storyboard */,
 				E3F71AB51F3D305700BCC10C /* Info.plist */,
 				E3F71AAD1F3D305700BCC10C /* RecieptBin.xcdatamodeld */,
+				E30429BD1F70D216001B7F56 /* Jenkinsfile */,
 			);
 			path = RecieptBin;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				E3EA7CEE1F4E6FED00C9DE05 /* RecieptListView.xib in Resources */,
 				E3F71AB41F3D305700BCC10C /* LaunchScreen.storyboard in Resources */,
+				E30429BE1F70D216001B7F56 /* Jenkinsfile in Resources */,
 				E3F71AB11F3D305700BCC10C /* Assets.xcassets in Resources */,
 				E3BF00811F4E8694002325E0 /* RecieptListCell.xib in Resources */,
 			);
