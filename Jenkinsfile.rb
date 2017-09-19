@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                # withMaven(maven: 'maven_3.5.0')
+
             }
         }
         stage('Test') {
