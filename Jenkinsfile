@@ -1,22 +1,20 @@
 pipeline {
-agent any
 
-stages {
-stage('Build') {
-steps {
-echo 'Building..'
-
-}
-}
-stage('Test') {
-steps {
-echo 'Testing..'
-}
-}
-stage('Deploy') {
-steps {
-echo 'Deploying....'
-}
-}
-}
+  stages {
+    stage('Dependencies') {
+      steps {
+        sh 'bundle install'
+      }
+    }
+    stage('Unit Tests') {
+      steps {
+        sh 'bundle exec fastlane test_unit'
+      }
+    }
+    stage('UI Tests') {
+      steps {
+        sh 'bundle exec fastlane test_ui'
+      }
+    }
+  }
 }

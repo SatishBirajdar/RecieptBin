@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='RecieptBinTests.xctest' tests='2' failures='1'>
+  <testsuite name='RecieptBinUITests.RecieptBinUITests' tests='1' failures='0'>
+    <testcase classname='RecieptBinUITests.RecieptBinUITests' name='testExample' time='6.689'/>
+  </testsuite>
+  <testsuite name='RecieptBinTests.RecieptPresenterTest' tests='1' failures='1'>
+    <testcase classname='RecieptBinTests.RecieptPresenterTest' name='testDisplayCategories'>
+      <failure message='XCTAssertEqual failed: (&quot;1&quot;) is not equal to (&quot;2&quot;) - '>RecieptBinTests/RecieptPresenterTest.swift:30</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

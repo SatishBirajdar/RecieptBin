@@ -1,0 +1,69 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.57.2"
+
+default_platform :ios
+
+platform :ios do
+  before_all do    
+    carthage(
+      platform: "ios",
+      cache_builds: true
+      )
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    test_unit
+  end
+
+  desc "Runs unit tests only"
+  lane :test_unit do
+    scan(
+      scheme: "RecieptBin"
+      )
+  end
+
+  desc "Runs all the tests and then pushes only if they succeed"
+  lane :push do
+    ensure_git_status_clean
+    test
+    push_to_git_remote
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :deploy do |options|
+    ensure_git_branch(
+      branch: 'master'
+    )
+    ensure_git_status_clean
+    if !options[:skip_testing]
+      test
+    end
+    increment_build_number
+    gym(scheme: "RecieptBin")
+    commit_version_bump(
+      xcodeproj: "RecieptBin.xcodeproj"
+      )
+    add_git_tag
+    if !options[:skip_push]
+      push_to_git_remote
+    end
+    pilot(
+      username: "satishbirajdar2010@gmail.com",
+      skip_waiting_for_build_processing: !options[:wait_for_processing]
+      )
+  end
+end
