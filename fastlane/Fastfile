@@ -41,29 +41,4 @@ platform :ios do
     test
     push_to_git_remote
   end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :deploy do |options|
-    ensure_git_branch(
-      branch: 'master'
-    )
-    ensure_git_status_clean
-    if !options[:skip_testing]
-      test
-    end
-    increment_build_number
-    gym(scheme: "RecieptBin")
-    commit_version_bump(
-      xcodeproj: "RecieptBin.xcodeproj"
-      )
-    add_git_tag
-    if !options[:skip_push]
-      push_to_git_remote
-    end
-    pilot(
-      username: "satishbirajdar2010@gmail.com",
-      skip_waiting_for_build_processing: !options[:wait_for_processing]
-      )
-  end
 end
